@@ -1,54 +1,7 @@
 "use client";
 
 import { useState } from "react";
-//import axios from 'axios';
-//import callLLMV2 from "./services/queryv2";
-//import { callLLM } from "./services/query";
 import callLLMV1 from "./services/queryV1";
-
-// const HF_TOKEN = "27672c58-f31e-4ab0-a45d-560824d2e050";
-
-// const apiUrl = `https://api.sambanova.ai/v1/chat/completions`;
-
-// async function postLLM(data: object) {
-//   try {
-//     const response = await axios.post(apiUrl, data, {
-//       headers: {
-//         Authorization: `Bearer ${HF_TOKEN}`,
-//         'Content-Type': 'application/json',
-//         'ACCESS-CONTROL-ALLOW-ORIGIN': '*'
-//       },
-//     });
-//     console.log(response);
-//     return response;
-//   } catch (error) {
-//     console.error('Error calling Hugging Face API:', error);
-//     throw error;
-//   }
-// }
-
-// async function callLLMV1(input: string) {
-//   console.log("calling callLLMV1");
-//   const requestPayload = {
-//     "stream": true,
-//     "model": "Meta-Llama-3.1-8B-Instruct",
-//     "messages": [
-//       {
-//         "role": "system",
-//         "content": "You are a helpful assistant"
-//       },
-//       {
-//         "role": "user",
-//         "content": input
-//       }
-//     ]
-//   };
-
-//   const response = await postLLM(requestPayload);
-//   console.log(response);
-//   return response;
-// }
-
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");

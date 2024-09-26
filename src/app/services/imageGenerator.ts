@@ -32,7 +32,5 @@ export default async function query(data: string) {
     const result = await response.blob();
     const res = await blobToBase64(result);
     console.log(res);
-    const url = URL.createObjectURL(result);
-    console.log(url);
     return res;
 }

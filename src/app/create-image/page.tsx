@@ -14,8 +14,6 @@ export default function Home() {
 
         try {
             console.log('Sending message to LLM:', input); // log input before the API call
-            //const res = await callLLM(input); // assuming res is a string response
-            //const res = await callLLMV1(input);
             const result = await query(input);
             console.log(result);
             if (result) {
