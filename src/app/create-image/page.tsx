@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import query from "../services/imageGenerator";
+import Image from "next/image";
 
 export default function Home() {
     const [inputValue, setInputValue] = useState("");
@@ -43,7 +44,7 @@ export default function Home() {
                                 onChange={(e) => setInputValue(e.target.value)} rows={3}></textarea>
                         </div>
                         <div className="card-body">
-                            {image && <img src={image} alt="Generated from Hugging Face API" />}
+                            {image && <Image src={image} alt="Generated from Hugging Face API" />}
 
                         </div>
                         <div className="d-grid d-block">
