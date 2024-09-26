@@ -42,7 +42,7 @@ export default function Home() {
                                 onChange={(e) => setInputValue(e.target.value)} rows={3}></textarea>
                         </div>
                         <div className="card-body">
-                            {image && <Image src={image} alt="Generated from Hugging Face API" />}
+                            {image && <Image src={image} alt="Generated from Hugging Face API" width={500} height={800} />}
 
                         </div>
                         <div className="d-grid d-block">
