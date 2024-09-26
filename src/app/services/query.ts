@@ -1,12 +1,12 @@
 import { HfInference } from '@huggingface/inference';
 
 // Define HF_TOKEN in your environment variables
-const HF_TOKEN = process.env.HF_TOKEN || "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";
+const HF_TOKEN = "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";
 
 // Initialize Hugging Face Inference Client
 const inference = new HfInference(HF_TOKEN);
 
-const repoId = "jinaai/reader-lm-1.5b";
+const repoId = "ajibawa-2023/Uncensored-Frank-Llama-3-8B";
 
 // Function to call the LLM model using Hugging Face's Inference Client
 export async function callLLM(prompt: string): Promise<string> {
@@ -14,7 +14,6 @@ export async function callLLM(prompt: string): Promise<string> {
         const response = await inference.textGeneration({
             model: repoId,
             inputs: prompt,
-            parameters: { max_new_tokens: 200 },
         });
 
         return response.generated_text;
